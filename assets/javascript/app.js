@@ -21,7 +21,7 @@ window.onload = function() {
         }
         var questionsAnswered = $('.answered').length
         console.log('q', questionsAnswered)
-        if (questionsAnswered === 13) {
+        if (questionsAnswered === 10) {
             // We done
             alert('You got this many right: ' + score)
         }
