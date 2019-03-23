@@ -2,11 +2,30 @@
     // The user will be prompted with 10 multiple choice questions
     // After timer runs out (60s), the page reveals the number of questions that the player answer correctly and incorrectly
     // User can only pick one answer per question
-
+    var score = 0
 window.onload = function() {
+    
         // When the start button is pressed, we begin the countdown
-    $("#start").on("click", start);
+    $("#start").click(function() {
+    start();
+    $('#start').hide(start);
+    });
 };
+
+    $('input').on('click', function(event) {
+        var isCorrect = $(this).data('correct')
+        console.log(isCorrect);
+        $(this).parent().addClass('answered')
+        if (isCorrect) {
+            score++
+        }
+        var questionsAnswered = $('.answered').length
+        console.log('q', questionsAnswered)
+        if (questionsAnswered === 13) {
+            // We done
+            alert('You got this many right: ' + score)
+        }
+    })
 
     // Variable that sets our number counter to 60
     var timeLeft = 60;
@@ -46,18 +65,4 @@ window.onload = function() {
     timeUp();
 }
     }
-    // var askQuestion;
-    
-    // function reset() {
-
-    //     time = 60;
-      
-    // DONE: Change the "display" div to "0."
-    // $("#display").text("60");
-      
-
-    // var wrongGuesses = [];
-    
-// Player has a limited amount of time to finish this quiz
-// The game ends when the timer runs out.
 
