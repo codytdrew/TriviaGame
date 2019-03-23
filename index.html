@@ -15,7 +15,7 @@
         </div>
 
         <div id="game-time">
-            <div id="display">Time Remaining: 60 seconds</div>
+            <div id="display"></div>
 
             <div id="buttons">
                 <button id="start">Start</button>
@@ -23,17 +23,85 @@
 
             <div id="question-master">
 
-                <div id="q1">What is the height(ft) of the Disney Land Castle?</div>
-                <div id="q2">Which professional surfer has won the most World Titles?</div>
-                <div id="q3">Where is the film Predator set?</div>
-                <div id="q4">Which university did Bill Gates drop out of in the 1970s to start Microsoft?</div>
-                <div id="q5">Which country were the 2010 Winter Olympic Games held in?</div>
-                <div id="q6">Which gaming franchise celebrated its 23rd anniversary on February 27, 2019? (pokemon)</div>
-                <div id="q7">"One More Time" is the title of a song from which famous artist?</div>
-                <div id="q8">In what country would you find the mouths of the MeKkng River? (Vietnam</div> )
-                <div id="q9">How many words rhyme with purple?</div>
-                <div id="q10">Who invented the equals symbol (=)?</div>
-            
+                <div id="q1">What is the height(ft) of the Disney Land Castle?<br>
+                    <div class="possiblity">
+                        <input type="radio" name="disney" value="100ft"> 100ft
+                        <input type="radio" name="disney" value="55.4ft"> 55.4ft
+                        <input type="radio" name="disney" value="63.8ft"> 63.8ft
+                        <input type="radio" name="disney" value="77ft"> 77ft
+                    </div>
+                </div>   
+                <div id="q2">Which professional surfer has won the most World Titles?<br>
+                    <div class="possiblity">
+                        <input type="radio" name="surfer" value="Rob Machado"> Rob Machado
+                        <input type="radio" name="surfer" value="Kelly Slater"> Kelly Slater
+                        <input type="radio" name="surfer" value="John Florence"> John Florence
+                        <input type="radio" name="surfer" value="Mick Fanning"> Mick Fanning
+                    </div>  
+                </div>
+                <div id="q3">Where is the film Predator set?<br>
+                    <div class="possiblity">
+                        <input type="radio" name="predator" value="South America"> South America
+                        <input type="radio" name="predator" value="Central America"> Central America
+                        <input type="radio" name="predator" value="Africa"> Africa
+                    </div>
+                </div>
+                <div id="q4">Which university did Bill Gates drop out of in the 1970s to start Microsoft?<br>
+                    <div class="possiblity">
+                        <input type="radio" name="BillyG" value="Yale"> Yale
+                        <input type="radio" name="BillyG" value="Stanford"> Stanford
+                        <input type="radio" name="BillyG" value="Harvard"> Harvard
+                        <input type="radio" name="BillyG" value="USC"> USC
+                    </div>
+                </div>
+                <div id="q5">Which country were the 2010 Winter Olympic Games held in?<br>
+                    <div class="possiblity">
+                        <input type="radio" name="olympics" value="Russia"> Russia
+                        <input type="radio" name="olympics" value="Canada"> Canada
+                        <input type="radio" name="olympics" value="Switzerland"> Switzerland
+                        <input type="radio" name="olympics" value="Antarctica"> Antarctica
+                    </div>
+                </div>
+                <div id="q6">Which gaming franchise celebrated its 23rd anniversary on February 27, 2019?<br>
+                    <div class="possiblity">
+                        <input type="radio" name="videogames" value="Halo"> Halo   
+                        <input type="radio" name="videogames" value="Pokemon"> Pokemon   
+                        <input type="radio" name="videogames" value="Super-Mario"> Super Mario   
+                        <input type="radio" name="videogames" value="Counter-Strike"> Counter Strike   
+                    </div>
+                </div>
+                <div id="q7">"One More Time" is the title of a song from which famous artist?<br>
+                    <div class="possiblity">
+                        <input type="radio" name="Daft" value="Justice"> Justice 
+                        <input type="radio" name="Daft" value="Ratatat"> Ratatat 
+                        <input type="radio" name="Daft" value="Daft-Punk"> Daft Punk 
+                        <input type="radio" name="Daft" value="Deadmau5"> Deadmau5 
+                    </div>
+                </div>
+                <div id="q8">In what country would you find the mouths of the MeKong River?<br>
+                    <div class="possiblity">
+                        <input type="radio" name="Mekong" value="Thailand"> Thailand 
+                        <input type="radio" name="Mekong" value="Laos"> Laos 
+                        <input type="radio" name="Mekong" value="Cambodia"> Cambodia 
+                        <input type="radio" name="Mekong" value="Vietnam"> Vietnam 
+                    </div>
+                </div> 
+                <div id="q9">How many words rhyme with purple?<br>
+                    <div class="possiblity">
+                        <input type="radio" name="purps" value="1"> 1 
+                        <input type="radio" name="purps" value="0"> 0 
+                        <input type="radio" name="purps" value="4"> 4 
+                        <input type="radio" name="purps" value="3"> 3 
+                    </div>
+                </div>
+                <div id="q10">Who invented the equals symbol (=)?<br>
+                    <div class="possiblity">
+                        <input type="radio" name="equals" value="Isaac-Newton"> Isaac Newton
+                        <input type="radio" name="equals" value="Robert-Recorde"> Robert Recorde 
+                        <input type="radio" name="equals" value="Albert-Einstein"> Albert Einstein 
+                        <input type="radio" name="equals" value="Bill-Nye"> Bill Nye 
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -52,7 +120,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="./assets/javascript/game.js"></script>
+<script src="./assets/javascript/app.js"></script>
 
 </body>
 </html>

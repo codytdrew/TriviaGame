@@ -1,34 +1,63 @@
-//Trivia Game 
+    //Trivia Game 
+    // The user will be prompted with 10 multiple choice questions
+    // After timer runs out (60s), the page reveals the number of questions that the player answer correctly and incorrectly
+    // User can only pick one answer per question
 
-    // The user will be prompted with True/False or multiple choice questions
-            // After timer runs out, the page reveals the number of questions that the player answer correctly and incorrectly
-        // User can only pick one answer per question
-        //include a countdown timer
+window.onload = function() {
+        // When the start button is pressed, we begin the countdown
+    $("#start").on("click", start);
+};
 
-    window.onload = function() {
-        $("#start").on("click", start);
-    };
+    // Variable that sets our number counter to 60
+    var timeLeft = 60;
 
-    //  Variable that will hold our setInterval that runs the countdown
-    var askQuestion;
+    // Variable that holds our interval ID upon start of quiz
+    var interValId;
     
-    function reset() {
+    // prevents clock from being sped up
+    var clockRunning = false;
 
-        time = 60;
+    // This is the start function that sets our interval
+    // Runs a decrement once a second
+    function start() {
+
+        if (!clockRunning) {
+        intervalId = setInterval(decrement, 1000);
+        clockRunning = true;
+    }
+}
+    // This is the decrement function
+    function decrement () {
+        timeLeft--;
+
+    $("#display").html("<h2>" + "Time Remaining: " + timeLeft + "</h2>");
+
+    if(timeLeft === 0) {
+    function timeUp() {
+        // in the element with an id of display add an h2 saying Time's Up!
+        // console log done
+
+        clockRunning = false;
+        console.log("done");
+        $("#display").append("<h2>" + "Time's Up!" + "</h2>");
+        console.log("time is up");
+        clearInterval(intervalId);
+    }
+    timeUp();
+}
+    }
+    // var askQuestion;
+    
+    // function reset() {
+
+    //     time = 60;
       
     // DONE: Change the "display" div to "0."
-    $("#display").text("60");
+    // $("#display").text("60");
       
 
-    var wrongGuesses = [];
+    // var wrongGuesses = [];
     
 // Player has a limited amount of time to finish this quiz
 // The game ends when the timer runs out.
-
-// setTimeout(tenSeconds, 1000 * 10);
-// setTimeout(twentySeconds, 1000 * 20);
-// setTimeout(thirtySeconds, 1000 * 30);
-// setTimeout(fortySeconds, 1000 * 40);
-// setTimeout(fiftySeconds, 1000 * 50);
-// setTimeout(timeUp, 1000 * 60);
 
